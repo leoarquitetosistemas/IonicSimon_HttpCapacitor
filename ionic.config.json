@@ -1,0 +1,7 @@
+{
+  "name": "academyHttp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

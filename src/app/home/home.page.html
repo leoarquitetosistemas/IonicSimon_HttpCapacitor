@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ionic Academy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p><ion-button (click)="standardCall()">Standard</ion-button></p>
+
+    <p><ion-button (click)="nativeCall()" expand="block">Native HTTP Call</ion-button></p>
+    <p><ion-button (click)="downloadFile()" expand="block">Download file</ion-button></p>
+
+    <img [src]="myImage" *ngIf="myImage">
+
+    <ion-list *ngIf="data">
+      <ion-card *ngFor="let entry of data.items">
+        <ion-card-header>
+          <ion-card-title>
+            {{entry.name}}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img [src]="entry.header_image">
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+  </div>
+
+  
+</ion-content>
